@@ -1,6 +1,6 @@
-name: 'Get & Cache Dependencis'
-description: 'Get the dependencies (via npm) and cache them'
-runs:
+name: 'Get & Cache Dependencis' # Required
+description: 'Get the dependencies (via npm) and cache them' # Required
+runs: # Required
   using: 'composite'
   steps:
     - name: Cache dependencies
