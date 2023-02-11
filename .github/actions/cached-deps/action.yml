@@ -10,7 +10,7 @@ outputs:
     description: 'Whether the cache was used.'
     value: ${{ steps.install-deps.outputs.cache-output }}
 env:
-  OUTPUT_MSG: 'The npm deps cache was used...'
+  OUTPUT_MSG: Simple
 runs: # Required
   using: 'composite'
   steps:
