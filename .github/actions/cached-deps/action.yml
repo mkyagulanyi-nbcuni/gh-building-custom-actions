@@ -26,5 +26,5 @@ runs: # Required
       if: steps.cache.outputs.cache-hit != 'true' || inputs.caching != 'true'
       run: |
         npm ci
-        echo "cache-output=$CACHE_LOG" >> $GITHUB_OUTPUT
+        echo "cache-output='{$CACHE_LOG}'" >> $GITHUB_OUTPUT
       shell: bash
