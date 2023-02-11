@@ -9,6 +9,8 @@ outputs:
   used-cache:
     description: 'Whether the cache was used.'
     value: ${{ steps.install-deps.outputs.cache-output }}
+env:
+  CACHE_LOG: 'Did not use the cache...'
 runs: # Required
   using: 'composite'
   steps:
@@ -24,5 +26,5 @@ runs: # Required
       if: steps.cache.outputs.cache-hit != 'true' || inputs.caching != 'true'
       run: |
         npm ci
-        echo "cache-output='Did not use the cache...'" >> $GITHUB_OUTPUT
+        echo "cache-output=$CACHE_LOG" >> $GITHUB_OUTPUT
       shell: bash
