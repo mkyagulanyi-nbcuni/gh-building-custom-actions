@@ -65,7 +65,7 @@ jobs:
       - name: Deploy site
         run: echo "Deploying..."
   information:
-    runs-on: ubuntu-lates
+    runs-on: ubuntu-latest
     steps:
      - name: Run custom js action
       uses: ./.github/actions/deploy-s3-javascript
